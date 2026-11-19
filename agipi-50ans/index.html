@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AGIPI 50 ans · Générique</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --blue:#0b3d91; --ink:#14181f; --muted:#6b7280; --line:#eceef2; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:Inter, system-ui, sans-serif; color:var(--ink); background:#fff; line-height:1.6; }
+  .wrap { max-width:760px; margin:0 auto; padding:72px 24px 80px; }
+  .tag { color:var(--blue); font-weight:700; font-size:13px; letter-spacing:.12em; text-transform:uppercase; }
+  h1 { font-size:clamp(30px,5vw,44px); font-weight:800; line-height:1.15; margin:12px 0 16px; }
+  .lead { font-size:18px; color:var(--muted); margin:0 0 48px; }
+  .lead b { color:var(--ink); font-weight:700; }
+
+  .v { margin-bottom:40px; }
+  .v video { width:100%; border-radius:14px; display:block; background:#000; }
+  .v p { margin:12px 0 0; font-weight:700; font-size:17px; }
+  .v p span { font-weight:400; color:var(--muted); }
+
+  h2 { font-size:22px; font-weight:800; margin:64px 0 8px; }
+  .hint { color:var(--muted); margin:0 0 20px; }
+
+  .t { display:flex; align-items:center; gap:16px; padding:14px 0; border-top:1px solid var(--line); }
+  .t:last-child { border-bottom:1px solid var(--line); }
+  .t b { flex:0 0 140px; font-weight:700; }
+  .t audio { flex:1; height:36px; }
+
+  ol.d { list-style:none; margin:0; padding:0; }
+  ol.d li { display:flex; gap:20px; padding:10px 0; border-top:1px solid var(--line); }
+  ol.d li:last-child { border-bottom:1px solid var(--line); }
+  ol.d .y { flex:0 0 48px; font-weight:800; color:var(--blue); }
+
+  .ask { margin-top:64px; background:var(--blue); color:#fff; border-radius:16px; padding:32px; }
+  .ask h2 { margin:0 0 16px; }
+  .ask ol { margin:0; padding-left:22px; font-size:18px; }
+  .ask li { margin:6px 0; }
+
+  footer { margin-top:48px; color:var(--muted); font-size:13px; text-align:center; }
+  @media (max-width:560px) { .t { flex-direction:column; align-items:stretch; gap:8px; } .t b { flex:none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="tag">AGIPI · 50 ans</div>
+  <h1>Générique : nouvelle direction artistique</h1>
+  <p class="lead">Deux dates seulement, <b>pour valider le style</b>. Le film complet reprendra toutes les dates, avec une caméra qui avance aussi en profondeur, jusqu'au final « 50 ans qu'on AGIPI ensemble ».</p>
+
+  <div class="v">
+    <video src="media/exemple-1.mp4" controls playsinline preload="metadata"></video>
+    <p>Exemple 1 <span>· musique Iconic</span></p>
+  </div>
+  <div class="v">
+    <video src="media/exemple-2.mp4" controls playsinline preload="metadata"></video>
+    <p>Exemple 2 <span>· autre musique</span></p>
+  </div>
+
+  <h2>Autres musiques</h2>
+  <p class="hint">Si vous préférez une autre ambiance.</p>
+  <div class="t"><b>Good People</b><audio src="media/good-people.mp3" controls preload="none"></audio></div>
+  <div class="t"><b>Slick Move</b><audio src="media/slick-move.mp3" controls preload="none"></audio></div>
+  <div class="t"><b>New Heights</b><audio src="media/new-heights.mp3" controls preload="none"></audio></div>
+  <div class="t"><b>Prophecy</b><audio src="media/prophecy.mp3" controls preload="none"></audio></div>
+
+  <h2>Les dates clés</h2>
+  <p class="hint">Celles envoyées précédemment.</p>
+  <ol class="d">
+    <li><span class="y">1976</span>Création et contrat de prévoyance CAP</li>
+    <li><span class="y">1994</span>Produit retraite Madelin FAR</li>
+    <li><span class="y">2015</span>Un fonds de dotation pour améliorer le quotidien des patients et des soignants</li>
+    <li><span class="y">2019</span>1ère à proposer le Plan d'Épargne Retraite - PER</li>
+    <li><span class="y">2020</span>COVID : 20M€ pour aider les adhérents et la recherche médicale</li>
+    <li><span class="y">2021</span>Première garantie du marché contre les violences intrafamiliales · 535 000 bénéficiaires couverts</li>
+    <li><span class="y">2023</span>+ de 1 million d'adhésions aux contrats AGIPI</li>
+    <li><span class="y">2025</span>Premier contrat de retraite à intégrer une garantie congé maternité</li>
+  </ol>
+
+  <div class="ask">
+    <h2>À valider</h2>
+    <ol>
+      <li>Le style</li>
+      <li>La musique</li>
+      <li>Les dates clés</li>
+    </ol>
+  </div>
+
+  <footer>Within</footer>
+</div>
+<script>
+  document.addEventListener('play', function (e) {
+    document.querySelectorAll('video, audio').forEach(function (m) {
+      if (m !== e.target) m.pause();
+    });
+  }, true);
+</script>
+</body>
+</html>
